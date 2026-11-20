@@ -1,1 +1,724 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAQI DIGITAL HUB | Premium Digital Marketplace</title>
+<meta name="description" content="Discover premium AI tools, streaming subscriptions, VPN services, IPTV and digital solutions at SAQI DIGITAL HUB.">
+<meta name="theme-color" content="#ffffff">
+
+<style>
+:root{
+  --black:#171717;
+  --orange:#ff7a18;
+  --muted:#707070;
+  --line:#ededed;
+  --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--black);
+  background:#fff;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.container{width:min(1160px,90%);margin:auto}
+
+/* HEADER */
+header{
+  height:82px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 5%;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:-.7px;
+}
+.brand-mark{
+  width:43px;height:43px;
+  border-radius:13px;
+  background:#171717;
+  color:#ff8a25;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  font-weight:900;
+  box-shadow:0 5px 15px #0002;
+}
+.brand small{
+  display:block;
+  font-size:9px;
+  color:#999;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-top:-4px;
+}
+.menu-btn{
+  width:48px;height:48px;
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  transition:.3s;
+  z-index:1100;
+}
+.menu-btn span{
+  width:21px;height:2px;
+  background:#171717;
+  transition:.3s;
+}
+.menu-btn.active span:nth-child(1){
+  transform:translateY(8px) rotate(45deg);
+}
+.menu-btn.active span:nth-child(2){opacity:0}
+.menu-btn.active span:nth-child(3){
+  transform:translateY(-8px) rotate(-45deg);
+}
+
+/* SIDE MENU */
+.overlay{
+  position:fixed;inset:0;
+  background:#0006;
+  opacity:0;visibility:hidden;
+  transition:.3s;
+  z-index:1050;
+}
+.overlay.show{opacity:1;visibility:visible}
+.side-menu{
+  position:fixed;
+  top:0;right:-360px;
+  width:min(340px,85%);
+  height:100vh;
+  background:#fff;
+  z-index:1060;
+  padding:100px 28px 30px;
+  transition:.35s;
+  box-shadow:-10px 0 40px #0001;
+  overflow:auto;
+}
+.side-menu.show{right:0}
+.side-menu h3{font-size:23px;margin-bottom:8px}
+.side-menu p{color:#888;font-size:13px;margin-bottom:25px}
+.side-menu a{
+  display:block;
+  padding:14px 12px;
+  border-bottom:1px solid #eee;
+  font-weight:700;
+}
+.side-menu a:hover{color:var(--orange);padding-left:20px}
+
+/* HERO */
+.hero{
+  padding:105px 0 95px;
+  background:
+  radial-gradient(circle at 85% 15%,#fff0e3,transparent 30%),
+  linear-gradient(120deg,#fff,#fafafa);
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:55px;
+  align-items:center;
+}
+.tag{
+  display:inline-block;
+  background:#fff1e5;
+  color:#e66b0b;
+  padding:8px 15px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:22px;
+}
+.hero h1{
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.08;
+  letter-spacing:-3px;
+  margin-bottom:24px;
+}
+.hero h1 span{color:var(--orange)}
+.hero p{
+  color:#777;
+  font-size:17px;
+  max-width:540px;
+  margin-bottom:30px;
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 23px;
+  border-radius:9px;
+  background:#171717;
+  color:#fff;
+  font-size:14px;
+  font-weight:800;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn.orange{background:var(--orange);color:#171717}
+.hero-art{
+  min-height:360px;
+  background:linear-gradient(145deg,#fff,#f3f3f3);
+  border:1px solid #eee;
+  border-radius:30px;
+  padding:35px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  box-shadow:0 25px 70px #0000000b;
+  position:relative;
+}
+.art-label{
+  font-size:12px;
+  color:#999;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+.art-title{font-size:35px;font-weight:900;line-height:1.2}
+.art-title span{color:var(--orange)}
+.art-desc{color:#888;font-size:14px;margin-top:15px}
+.float-chip{
+  position:absolute;
+  right:25px;top:25px;
+  background:#fff;
+  padding:12px 16px;
+  border-radius:12px;
+  box-shadow:0 8px 25px #0001;
+  font-size:12px;font-weight:800;
+}
+
+/* TRUST STRIP */
+.trust{
+  background:#171717;
+  color:#fff;
+  padding:23px 0;
+}
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  text-align:center;
+}
+.trust strong{display:block;font-size:15px}
+.trust span{font-size:11px;color:#aaa}
+
+/* SECTION COMMON */
+section{padding:85px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 45px}
+.eyebrow{
+  color:var(--orange);
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.section-head h2{
+  font-size:clamp(30px,4vw,43px);
+  line-height:1.2;
+  margin:12px 0;
+  letter-spacing:-1.5px;
+}
+.section-head p{color:#777;font-size:15px}
+
+/* ABOUT */
+.about{background:#f7f7f7}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.about-panel{
+  background:#fff;
+  padding:35px;
+  border-radius:20px;
+  border:1px solid #eee;
+}
+.about-panel h3{font-size:25px;margin-bottom:15px}
+.about-panel p{color:#777;margin-bottom:15px}
+.about-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+.point{
+  padding:19px;
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:13px;
+  font-weight:800;
+  font-size:14px;
+}
+.point span{display:block;color:var(--orange);font-size:22px;margin-bottom:7px}
+
+/* SERVICE CARDS */
+.services{background:#fff}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.service-card{
+  border:1px solid #eee;
+  padding:27px;
+  border-radius:18px;
+  background:#fff;
+  transition:.3s;
+}
+.service-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 18px 45px #0000000c;
+  border-color:#ffd5b5;
+}
+.service-icon{
+  width:54px;height:54px;
+  display:grid;place-items:center;
+  border-radius:15px;
+  background:#fff2e8;
+  color:#f07819;
+  font-size:25px;
+  margin-bottom:20px;
+}
+.service-card h3{font-size:19px;margin-bottom:8px}
+.service-card p{color:#888;font-size:13px;min-height:60px}
+.card-link{
+  display:inline-block;
+  color:#e66d12;
+  font-weight:800;
+  font-size:13px;
+  margin-top:15px;
+}
+
+/* BRAND LOGOS */
+.brands{background:#f8f8f8}
+.logo-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;
+}
+.logo-box{
+  min-height:100px;
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:14px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  padding:15px 7px;
+  font-size:12px;
+  font-weight:800;
+  color:#444;
+}
+.logo-box img{width:33px;height:33px;object-fit:contain}
+.logo-box:hover{border-color:#ffb47b;transform:translateY(-3px)}
+
+/* VPN ADS */
+.vpn-section{background:#fff3e9}
+.vpn-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+.vpn-card{
+  padding:35px;
+  border-radius:22px;
+  color:#fff;
+  min-height:230px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.nord{background:linear-gradient(135deg,#183a69,#071a35)}
+.pure{background:linear-gradient(135deg,#ed741c,#b53b16)}
+.vpn-card h3{font-size:27px;margin-bottom:9px}
+.vpn-card p{font-size:14px;color:#ffffffc9;margin-bottom:18px}
+.vpn-card a{
+  background:#fff;color:#171717;
+  padding:11px 18px;border-radius:8px;
+  width:max-content;font-size:13px;font-weight:900
+}
+
+/* PAYMENT */
+.payment{background:#f6f6f6}
+.payment-list{
+  display:flex;flex-wrap:wrap;gap:13px;
+  justify-content:center;
+}
+.pay{
+  background:#fff;border:1px solid #eee;
+  border-radius:12px;padding:16px 22px;
+  font-weight:800;font-size:14px
+}
+
+/* CONTACT */
+.contact{background:#fff}
+.contact-box{
+  background:#171717;color:#fff;
+  border-radius:25px;padding:55px 30px;
+  text-align:center;
+}
+.contact-box h2{font-size:35px;margin-bottom:12px}
+.contact-box p{color:#bbb;margin-bottom:25px}
+.contact-box .btn{background:var(--orange);color:#171717}
+
+/* FAQ */
+.faq{background:#f7f7f7}
+.faq-item{
+  max-width:760px;margin:12px auto;
+  background:#fff;border:1px solid #eee;
+  border-radius:12px;overflow:hidden
+}
+.faq-question{
+  width:100%;border:0;background:#fff;
+  padding:19px;text-align:left;
+  display:flex;justify-content:space-between;
+  font-weight:800;color:#222
+}
+.faq-answer{display:none;padding:0 19px 19px;color:#777;font-size:14px}
+.faq-item.open .faq-answer{display:block}
+.faq-item.open .plus{transform:rotate(45deg)}
+.plus{font-size:22px;color:var(--orange);transition:.2s}
+
+/* FOOTER */
+footer{background:#111;color:#fff;padding:55px 0 25px}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;
+  gap:35px;margin-bottom:35px
+}
+footer h3{margin-bottom:14px}
+footer p,footer a{color:#aaa;font-size:13px}
+footer a{display:block;margin:8px 0}
+footer a:hover{color:var(--orange)}
+.copyright{
+  border-top:1px solid #333;padding-top:20px;
+  text-align:center;color:#777;font-size:12px
+}
+
+@media(max-width:800px){
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .hero{padding:75px 0}
+ .hero-art{min-height:270px}
+ .cards{grid-template-columns:repeat(2,1fr)}
+ .logo-grid{grid-template-columns:repeat(3,1fr)}
+ .trust-grid{grid-template-columns:repeat(2,1fr)}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ header{height:70px;padding:0 5%}
+ .brand{font-size:17px}
+ .brand-mark{width:38px;height:38px}
+ .hero h1{letter-spacing:-1.7px}
+ .cards,.vpn-grid,.about-points{grid-template-columns:1fr}
+ .logo-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+ .logo-box{min-height:85px;font-size:10px}
+ .trust-grid{gap:15px}
+ section{padding:65px 0}
+ .footer-grid{grid-template-columns:1fr}
+ .contact-box h2{font-size:27px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <span class="brand-mark">S</span>
+    <span>SAQI DIGITAL HUB<small>PREMIUM DIGITAL SERVICES</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="side-menu" id="sideMenu">
+  <h3>Explore SAQI</h3>
+  <p>Your Digital World, All in One Hub.</p>
+  <a href="index.html">Home</a>
+  <a href="#about">About Us</a>
+  <a href="services.html">All Services</a>
+  <a href="pricing.html">Pricing & Plans</a>
+  <a href="#vpn">VPN Offers</a>
+  <a href="#payment">Payment Methods</a>
+  <a href="#contact">Contact Us</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<div class="hero">
+ <div class="container hero-grid">
+  <div>
+   <span class="tag">✦ YOUR PREMIUM DIGITAL DESTINATION</span>
+   <h1>Everything Digital.<br><span>One Smart Hub.</span></h1>
+   <p>Explore premium AI tools, streaming subscriptions, VPN services, IPTV and creative solutions — with affordable prices and dedicated customer support.</p>
+   <div class="actions">
+    <a class="btn orange" href="services.html">Explore Services ↗</a>
+    <a class="btn" href="pricing.html">View Pricing</a>
+   </div>
+  </div>
+  <div class="hero-art">
+   <div class="float-chip">✦ PREMIUM QUALITY</div>
+   <div class="art-label">WELCOME TO SAQI DIGITAL HUB</div>
+   <div class="art-title">Work Smarter.<br>Stream Better.<br><span>Go Digital.</span></div>
+   <div class="art-desc">AI • Entertainment • VPN • IPTV • Digital Tools</div>
+  </div>
+ </div>
+</div>
+
+<!-- TRUST -->
+<div class="trust">
+ <div class="container trust-grid">
+  <div><strong>Premium Services</strong><span>Digital subscriptions</span></div>
+  <div><strong>Affordable Plans</strong><span>Competitive pricing</span></div>
+  <div><strong>Quick Support</strong><span>Customer assistance</span></div>
+  <div><strong>Warranty Options</strong><span>Plan dependent</span></div>
+ </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+ <div class="container about-grid">
+  <div class="about-panel">
+   <span class="eyebrow">ABOUT OUR HUB</span>
+   <h3>Welcome to SAQI DIGITAL HUB</h3>
+   <p>SAQI DIGITAL HUB is an independent digital services marketplace bringing together popular online tools, entertainment subscriptions, VPN services and IPTV options.</p>
+   <p>Our goal is to make digital services easier to explore, compare and order through one convenient platform.</p>
+   <a class="btn orange" href="services.html">Discover Our Services</a>
+  </div>
+  <div class="about-points">
+   <div class="point"><span>✦</span>Premium Digital Tools</div>
+   <div class="point"><span>◈</span>Multiple Categories</div>
+   <div class="point"><span>↗</span>Easy Ordering</div>
+   <div class="point"><span>✓</span>Customer Support</div>
+  </div>
+ </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+ <div class="container">
+  <div class="section-head">
+   <span class="eyebrow">WHAT WE OFFER</span>
+   <h2>Explore Our <span style="color:#ff7a18">Services</span></h2>
+   <p>Discover a wide range of digital products and subscriptions, organized into simple categories.</p>
+  </div>
+  <div class="cards">
+   <div class="service-card">
+    <div class="service-icon">✧</div>
+    <h3>AI & Productivity</h3>
+    <p>AI assistants, writing tools, research platforms and productivity subscriptions.</p>
+    <a class="card-link" href="services.html#ai">Explore AI Tools ↗</a>
+   </div>
+   <div class="service-card">
+    <div class="service-icon">▶</div>
+    <h3>Entertainment</h3>
+    <p>Streaming subscriptions for movies, series, documentaries and digital entertainment.</p>
+    <a class="card-link" href="services.html#entertainment">Explore Streaming ↗</a>
+   </div>
+   <div class="service-card">
+    <div class="service-icon">◉</div>
+    <h3>Premium VPN</h3>
+    <p>Explore premium VPN subscription options for supported devices and plans.</p>
+    <a class="card-link" href="services.html#vpn">Explore VPNs ↗</a>
+   </div>
+   <div class="service-card">
+    <div class="service-icon">▣</div>
+    <h3>IPTV Services</h3>
+    <p>Browse available IPTV providers and subscription options.</p>
+    <a class="card-link" href="services.html#iptv">Explore IPTV ↗</a>
+   </div>
+   <div class="service-card">
+    <div class="service-icon">✎</div>
+    <h3>Design & Editing</h3>
+    <p>Creative design, photo editing, video editing and content creation tools.</p>
+    <a class="card-link" href="services.html#design">Explore Tools ↗</a>
+   </div>
+   <div class="service-card">
+    <div class="service-icon">＋</div>
+    <h3>Other Digital Services</h3>
+    <p>Explore additional subscriptions and digital solutions available through our hub.</p>
+    <a class="card-link" href="services.html#other">Explore More ↗</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- BRAND LOGOS -->
+<section class="brands">
+ <div class="container">
+  <div class="section-head">
+   <span class="eyebrow">POPULAR PLATFORMS</span>
+   <h2>Brands & <span style="color:#ff7a18">Platforms</span></h2>
+   <p>Explore popular names across our digital service categories.</p>
+  </div>
+  <div class="logo-grid">
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/openai" alt="OpenAI" onerror="this.style.display='none'">ChatGPT</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini" onerror="this.style.display='none'">Gemini</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/canva" alt="Canva" onerror="this.style.display='none'">Canva</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/capcut" alt="CapCut" onerror="this.style.display='none'">CapCut</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/netflix" alt="Netflix" onerror="this.style.display='none'">Netflix</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/spotify" alt="Spotify" onerror="this.style.display='none'">Spotify</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/primevideo" alt="Prime Video" onerror="this.style.display='none'">Prime Video</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/nordvpn" alt="NordVPN" onerror="this.style.display='none'">NordVPN</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/surfshark" alt="Surfshark" onerror="this.style.display='none'">Surfshark</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/adobe" alt="Adobe" onerror="this.style.display='none'">Adobe</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/youtube" alt="YouTube" onerror="this.style.display='none'">YouTube</div>
+   <div class="logo-box"><img src="https://cdn.simpleicons.org/grammarly" alt="Grammarly" onerror="this.style.display='none'">Grammarly</div>
+  </div>
+ </div>
+</section>
+
+<!-- VPN PROMOTIONS -->
+<section class="vpn-section" id="vpn">
+ <div class="container">
+  <div class="section-head">
+   <span class="eyebrow">SPECIAL OFFERS</span>
+   <h2>Premium VPN <span style="color:#ff7a18">Services</span></h2>
+   <p>Discover available VPN subscription options and ask us about current plans.</p>
+  </div>
+  <div class="vpn-grid">
+   <div class="vpn-card nord">
+    <h3>NordVPN</h3>
+    <p>Explore premium VPN plans and available subscription durations.</p>
+    <a href="https://wa.me/923471191229?text=I%20want%20to%20know%20about%20NordVPN">Ask for Details ↗</a>
+   </div>
+   <div class="vpn-card pure">
+    <h3>PureVPN</h3>
+    <p>Check current availability, subscription options and pricing.</p>
+    <a href="https://wa.me/923471191229?text=I%20want%20to%20know%20about%20PureVPN">Ask for Details ↗</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="payment" id="payment">
+ <div class="container">
+  <div class="section-head">
+   <span class="eyebrow">CONVENIENT PAYMENTS</span>
+   <h2>Payment <span style="color:#ff7a18">Methods</span></h2>
+   <p>Available payment options can be confirmed directly before placing your order.</p>
+  </div>
+  <div class="payment-list">
+   <div class="pay">Easypaisa</div>
+   <div class="pay">JazzCash</div>
+   <div class="pay">UPaisa</div>
+   <div class="pay">SADA Pay</div>
+   <div class="pay">NayaPay</div>
+   <div class="pay">Binance</div>
+   <div class="pay">Rizon</div>
+  </div>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+ <div class="container">
+  <div class="section-head">
+   <span class="eyebrow">NEED HELP?</span>
+   <h2>Frequently Asked <span style="color:#ff7a18">Questions</span></h2>
+   <p>Some useful information before placing an order.</p>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">How can I place an order? <span class="plus">+</span></button>
+   <div class="faq-answer">Visit our Services or Pricing page and contact us on WhatsApp to confirm availability and order details.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">How can I check current prices? <span class="plus">+</span></button>
+   <div class="faq-answer">Visit the Pricing page or contact our support team for the latest available plans and prices.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">Is warranty available? <span class="plus">+</span></button>
+   <div class="faq-answer">Warranty duration and conditions depend on the specific service and plan. Confirm the terms before ordering.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">How can I contact support? <span class="plus">+</span></button>
+   <div class="faq-answer">You can contact SAQI DIGITAL HUB through the WhatsApp contact link on this website.</div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+ <div class="container">
+  <div class="contact-box">
+   <span class="eyebrow">LET'S CONNECT</span>
+   <h2>Ready to Go Digital?</h2>
+   <p>Contact SAQI DIGITAL HUB for service details, availability and customer support.</p>
+   <a class="btn"
+     X
+
+Code
+
+Preview
+
+<a class="btn"
+
+href="https://wa.me/923471191229">Chat on WhatsApp
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3>SAQI DIGITAL HUB</h3> <p>Premium Digital Services Affordable Prices Quick Support</p>
+<p style="margin-top: 12px">An independent digital
+services marketplace.</p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a href="services.html">All Services</a>
+<a href="pricing.html">Pricing</a>
+<a href="#faq">FAQ</a>
+</div>
+<div>
+<h3>Contact</h3>
+<a href="https://wa.me/923471191229">WhatsApp: 0347 1191229</a>
+<a href="mailto:saqidigitalhub@gmail.com">Email Us</a>
+<a
+href="https://instagram.com/saqi.digitalhub">Instagra m</a>
+to
+</div>
+</div>
+<div class="copyright">
+© 2026 SAQI DIGITAL HUB. All rights reserved.<br> Independent seller. Third-party trademarks belong
+their respective owners.
+</div>
+</div>
+
+</footer>
