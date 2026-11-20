@@ -1,11 +1,249 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services | SAQI DIGITAL HUB</title><meta name="description" content="Explore IPTV, streaming subscriptions, premium VPNs, AI tools, video editing and other digital services."><link rel="canonical" href="https://YOUR-DOMAIN.com/services.html"><link rel="stylesheet" href="assets/style.css"><script defer src="assets/app.js"></script></head><body>
-<header class="top"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>SAQI <b>DIGITAL HUB</b></span></a>
-<button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-<nav class="main-nav"><a href="index.html">Home</a><a href="services.html" class='active'>Services</a><a href="pricing.html" >Pricing</a><a href="index.html#payment-methods">Payment Methods</a><a href="index.html#ads">Ads</a><a href="index.html#warranty">Warranty & Policy</a><a href="index.html#contact">Contact</a></nav></header>
-<div class="menu-backdrop"></div><aside class="side-menu" aria-hidden="true"><div class="side-menu-head"><b>MENU</b><button class="menu-close" aria-label="Close menu">×</button></div><a href="index.html">Home</a><a href="services.html">All Services</a><a href="pricing.html">Pricing</a><a href="pricing.html">Shop Now</a><a href="index.html#payment-methods">Payment Methods</a><a href="index.html#ads">Ads & Offers</a><a href="index.html#warranty">Warranty & Policy</a><a href="index.html#contact">Contact Us</a><a href="index.html#faq">FAQ</a></aside><main><section class="page-hero"><p class="eyebrow">DISCOVER THE HUB</p><h1>Our <em>Services</em></h1><p>Explore digital subscriptions and tools across five categories.</p></section>
-<section class="section wrap service-section" id="iptv"><p class="eyebrow">01 / TELEVISION</p><h2>IPTV <em>Services</em></h2><p>Explore IPTV service options. Tap through to view listed prices.</p><div class="logo-slider"><div class="logo-track auto-logos"><span>OPPLEX TV</span><span>HEXA4K</span><span>STARSHARE</span><span>B1G TV</span><span>GEO IPTV</span><span>5G LIVE</span><span>MEGA OTT</span><span>ROLEX TV</span><span>FILEX IPTV</span><span>BOSS TV</span><span>ZUM TV</span><span>TREX OTT</span><span>STRONG 8K</span></div></div><a class="btn primary" href="pricing.html#iptv">View IPTV Prices</a></section>
-<section class="section dark" id="streaming"><div class="wrap service-section"><p class="eyebrow">02 / ENTERTAINMENT</p><h2>Streaming <em>Subscriptions</em></h2><div class="logo-slider"><div class="logo-track auto-logos"><span>NETFLIX</span><span>PRIME VIDEO</span><span>HBO MAX</span><span>DISNEY+</span><span>HULU</span><span>PARAMOUNT+</span><span>PEACOCK</span><span>BRITBOX</span><span>ZEE5</span><span>CRAVE</span><span>CHAUPAL</span><span>CRUNCHYROLL</span><span>NETFLIX</span><span>PRIME VIDEO</span></div></div><a class="btn primary" href="pricing.html#entertainment">View Streaming Prices</a></div></section>
-<section class="section wrap service-section" id="vpn"><p class="eyebrow">03 / PRIVACY & SECURITY</p><h2>Premium <em>VPNs</em></h2><div class="logo-slider"><div class="logo-track auto-logos"><span>NORDVPN</span><span>SURFSHARK</span><span>EXPRESSVPN</span><span>PROTON VPN</span><span>IPVANISH</span><span>NORDVPN</span><span>SURFSHARK</span></div></div><a class="btn primary" href="pricing.html#vpn">View VPN Prices</a></section>
-<section class="section dark" id="creative"><div class="wrap service-section"><p class="eyebrow">04 / CREATE & PRODUCE</p><h2>AI Tools & <em>Video Editing</em></h2><div class="logo-slider"><div class="logo-track auto-logos"><span>CAPCUT PRO</span><span>CANVA PRO</span><span>PICSART</span><span>LEONARDO AI</span><span>CHATGPT</span><span>GEMINI</span><span>GROK</span><span>GRAMMARLY</span><span>QUILLBOT</span><span>ELEVENLABS</span><span>GOOGLE FLOW</span><span>ADOBE</span></div></div><a class="btn primary" href="pricing.html#creative">View Tool Prices</a></div></section>
-<section class="section wrap service-section" id="other"><p class="eyebrow">05 / SOCIAL & MORE</p><h2>Other <em>Subscriptions</em></h2><div class="logo-slider"><div class="logo-track auto-logos"><span>TIKTOK</span><span>LIKEE</span><span>VIEWS</span><span>FOLLOWERS</span><span>YOUTUBE</span><span>SPOTIFY</span><span>TIKTOK</span><span>LIKEE</span></div></div><p>Ask us about availability and current rates for additional services.</p><a class="btn primary" href="https://wa.me/923471191229">Ask on WhatsApp</a></section></main>
-<footer><div class="copyright">© <span id="year"></span> SAQI DIGITAL HUB · <a href="index.html">Home</a> · <a href="pricing.html">Pricing</a> · <a href="https://wa.me/923471191229">WhatsApp</a></div></footer></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All Services | SAQI DIGITAL HUB</title>
+<meta name="description" content="Explore AI tools, streaming, VPN, IPTV, design and digital services at SAQI DIGITAL HUB.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#191919;background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1150px;margin:auto}
+header{height:78px;padding:0 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:100}
+.brand{font-weight:900;font-size:20px;display:flex;align-items:center;gap:10px}
+.mark{background:#171717;color:#ff871c;border-radius:12px;width:42px;height:42px;display:grid;place-items:center;font-size:24px}
+.brand small{display:block;font-size:9px;color:#999;letter-spacing:2px}
+.menu-btn{border:1px solid #eee;background:#fff;border-radius:12px;width:46px;height:46px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+.menu-btn span{width:21px;height:2px;background:#111;transition:.3s}
+.menu-btn.active span:first-child{transform:translateY(8px) rotate(45deg)}
+.menu-btn.active span:nth-child(2){opacity:0}
+.menu-btn.active span:last-child{transform:translateY(-8px) rotate(-45deg)}
+.overlay{position:fixed;inset:0;background:#0006;z-index:110;display:none}
+.overlay.show{display:block}
+.menu{position:fixed;right:-330px;top:0;width:300px;height:100vh;background:#fff;z-index:120;padding:100px 25px 25px;transition:.3s}
+.menu.show{right:0}
+.menu a{display:block;padding:14px;border-bottom:1px solid #eee;font-weight:bold}
+.menu a:hover{color:#f07818}
+.hero{padding:85px 0;text-align:center;background:linear-gradient(135deg,#fff,#fff2e8)}
+.eyebrow{color:#f07818;font-weight:900;font-size:11px;letter-spacing:2px}
+.hero h1{font-size:clamp(36px,6vw,58px);line-height:1.15;margin:15px 0}
+.hero h1 span{color:#f07818}
+.hero p{color:#777;max-width:650px;margin:auto}
+.hero a,.order{display:inline-block;background:#171717;color:#fff;padding:12px 22px;border-radius:8px;margin-top:22px;font-weight:bold}
+.section{padding:65px 0}
+.section:nth-child(even){background:#f7f7f7}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{font-size:32px;margin:8px 0}
+.heading p{color:#888}
+.category{margin:30px 0 50px;scroll-margin-top:100px}
+.category-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:20px}
+.category-head h3{font-size:24px}
+.category-head p{font-size:13px;color:#888}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{background:#fff;border:1px solid #eee;border-radius:15px;padding:20px;text-align:center;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 30px #0000000b;border-color:#ffc89f}
+.card img{width:42px;height:42px;object-fit:contain;margin-bottom:10px}
+.card h4{font-size:15px}
+.card p{font-size:11px;color:#999;margin-top:5px}
+.logo-row{display:flex;gap:13px;overflow:hidden;margin:20px 0 25px}
+.logo-row div{min-width:130px;padding:13px;background:#fff;border:1px solid #eee;border-radius:10px;text-align:center;font-size:12px;font-weight:bold;animation:slide 18s linear infinite}
+.logo-row:hover div{animation-play-state:paused}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-35px)}}
+.category-btn{display:inline-block;padding:10px 17px;border:1px solid #eee;border-radius:8px;font-size:12px;font-weight:bold;margin-top:20px}
+.category-btn:hover{background:#171717;color:#fff}
+.note{text-align:center;background:#171717;color:#fff;padding:38px 20px;border-radius:18px}
+.note p{color:#bbb;margin-top:8px}
+footer{background:#111;color:#fff;text-align:center;padding:35px 15px}
+footer p{font-size:12px;color:#aaa;margin:7px}
+@media(max-width:800px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.cards{grid-template-columns:repeat(2,1fr);gap:9px}.card{padding:14px 8px}.card img{width:32px;height:32px}.card h4{font-size:12px}.category-head h3{font-size:20px}}
+</style>
+</head>
+<body>
+
+<header>
+<a href="index.html" class="brand">
+<span class="mark">S</span>
+<span>SAQI DIGITAL HUB<small>PREMIUM DIGITAL SERVICES</small></span>
+</a>
+<button class="menu-btn" id="menuBtn" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</header>
+
+<div class="overlay" id="overlay"></div>
+<nav class="menu" id="menu">
+<h3>Explore SAQI</h3>
+<a href="index.html">Home</a>
+<a href="services.html">All Services</a>
+<a href="pricing.html">Pricing</a>
+<a href="index.html#payment">Payment Methods</a>
+<a href="index.html#contact">Contact Us</a>
+</nav>
+
+<section class="hero">
+<div class="container">
+<span class="eyebrow">OUR DIGITAL COLLECTION</span>
+<h1>Explore All <span>Services</span></h1>
+<p>Discover premium subscriptions, AI platforms, creative tools, entertainment services and much more — all in one place.</p>
+<a href="pricing.html">View All Prices ↗</a>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="heading">
+<span class="eyebrow">SERVICE DIRECTORY</span>
+<h2>Choose Your Category</h2>
+<p>Explore our available digital service categories.</p>
+</div>
+
+<div class="category" id="ai">
+<div class="category-head"><div><h3>🤖 AI & Productivity</h3><p>Artificial intelligence and productivity tools</p></div></div>
+<div class="logo-row"><div>ChatGPT</div><div>Gemini</div><div>Grok AI</div><div>Leonardo AI</div><div>Muse AI</div><div>ElevenLabs</div><div>Lovable</div></div>
+<div class="cards">
+<div class="card"><img src="https://cdn.simpleicons.org/openai" alt="OpenAI"><h4>ChatGPT Plus</h4><p>AI Assistant</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini"><h4>Gemini Pro</h4><p>Google AI</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/x" alt="Grok"><h4>Grok AI</h4><p>AI Assistant</p></div>
+<div class="card"><h4>Leonardo AI</h4><p>AI Image Creation</p></div>
+<div class="card"><h4>Muse AI</h4><p>AI Tools</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/elevenlabs" alt="ElevenLabs"><h4>ElevenLabs</h4><p>AI Voice</p></div>
+<div class="card"><h4>Lovable Pro</h4><p>AI Development</p></div>
+<div class="card"><h4>Google Flow / Veo</h4><p>AI Video Generation</p></div>
+</div>
+<a class="category-btn" href="pricing.html">Check AI Prices ↗</a>
+</div>
+
+<div class="category" id="entertainment">
+<div class="category-head"><div><h3>🎬 Entertainment & Streaming</h3><p>Movies, series and entertainment subscriptions</p></div></div>
+<div class="logo-row"><div>Netflix</div><div>Prime Video</div><div>Disney+</div><div>HBO Max</div><div>Crunchyroll</div><div>Spotify</div><div>Apple TV+</div></div>
+<div class="cards">
+<div class="card"><img src="https://cdn.simpleicons.org/netflix" alt="Netflix"><h4>Netflix</h4><p>Streaming</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/primevideo" alt="Prime Video"><h4>Prime Video</h4><p>Streaming</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/disneyplus" alt="Disney"><h4>Disney+</h4><p>Entertainment</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/hbo" alt="HBO"><h4>HBO Max</h4><p>Streaming</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/crunchyroll" alt="Crunchyroll"><h4>Crunchyroll</h4><p>Anime</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/spotify" alt="Spotify"><h4>Spotify</h4><p>Music</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/appletv" alt="Apple TV"><h4>Apple TV+</h4><p>Streaming</p></div>
+<div class="card"><h4>JioHotstar</h4><p>Entertainment</p></div>
+<div class="card"><h4>Hulu</h4><p>Streaming</p></div>
+<div class="card"><h4>Paramount+</h4><p>Entertainment</p></div>
+<div class="card"><h4>Peacock TV</h4><p>Streaming</p></div>
+<div class="card"><h4>BritBox</h4><p>Streaming</p></div>
+<div class="card"><h4>Zee5</h4><p>Entertainment</p></div>
+<div class="card"><h4>Crave</h4><p>Streaming</p></div>
+<div class="card"><h4>ShamerooMe</h4><p>Entertainment</p></div>
+<div class="card"><h4>Eros Now</h4><p>Entertainment</p></div>
+<div class="card"><h4>AMC+</h4><p>Streaming</p></div>
+<div class="card"><h4>Starz</h4><p>Streaming</p></div>
+<div class="card"><h4>Tabii</h4><p>Entertainment</p></div>
+<div class="card"><h4>KOCOWA+</h4><p>Korean Content</p></div>
+<div class="card"><h4>MGM+</h4><p>Streaming</p></div>
+<div class="card"><h4>Hallmark+</h4><p>Entertainment</p></div>
+<div class="card"><h4>Rakuten Viki</h4><p>Asian Content</p></div>
+<div class="card"><h4>Chaupal</h4><p>Entertainment</p></div>
+</div>
+<a class="category-btn" href="pricing.html">Check Entertainment Prices ↗</a>
+</div>
+
+<div class="category" id="vpn">
+<div class="category-head"><div><h3>🔐 Premium VPN Services</h3><p>Explore VPN subscription options</p></div></div>
+<div class="logo-row"><div>NordVPN</div><div>Surfshark</div><div>ExpressVPN</div><div>Proton VPN</div><div>IPVanish</div></div>
+<div class="cards">
+<div class="card"><img src="https://cdn.simpleicons.org/nordvpn" alt="NordVPN"><h4>NordVPN</h4><p>Premium VPN</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/surfshark" alt="Surfshark"><h4>Surfshark</h4><p>Premium VPN</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/expressvpn" alt="ExpressVPN"><h4>ExpressVPN</h4><p>Premium VPN</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/protonvpn" alt="Proton VPN"><h4>Proton VPN</h4><p>Privacy Service</p></div>
+<div class="card"><h4>IPVanish</h4><p>Premium VPN</p></div>
+</div>
+<a class="category-btn" href="pricing.html">Check VPN Prices ↗</a>
+</div>
+
+<div class="category" id="design">
+<div class="category-head"><div><h3>🎨 Design & Video Editing</h3><p>Creative, editing and design platforms</p></div></div>
+<div class="logo-row"><div>CapCut</div><div>Canva</div><div>Adobe</div><div>PicsArt</div><div>VidIQ</div></div>
+<div class="cards">
+<div class="card"><img src="https://cdn.simpleicons.org/capcut" alt="CapCut"><h4>CapCut Pro</h4><p>Video Editing</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/canva" alt="Canva"><h4>Canva Pro</h4><p>Graphic Design</p></div>
+<div class="card"><img src="https://cdn.simpleicons.org/adobe" alt="Adobe"><h4>Adobe Premium</h4><p>Creative Tools</p></div>
+<div class="card"><h4>PicsArt Pro</h4><p>Photo Editing</p></div>
+<div class="card"><h4>VidIQ Max</h4><p>YouTube Tools</p></div>
+</div>
+<a class="category-btn" href="pricing.html">Check Design Prices ↗</a>
+</div>
+
+<div class="category" id="iptv">
+<div class="category-head"><div><h3>📺 IPTV Services</h3><p>Browse available IPTV providers</p></div></div>
+<div class="cards">
+<div class="card"><h4>Opplex TV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Hexa4K</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>StarShare TV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>B1G TV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Geo IPTV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>5G Live / Zain TV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Mega OTT</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Rolex TV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Filex IPTV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Boss TV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Zum TV</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Trex OTT</h4><p>IPTV Subscription</p></div>
+<div class="card"><h4>Strong 8K</h4><p>IPTV Subscription</p></div>
+</div>
+<a class="category-btn" href="pricing.html">Check IPTV Prices ↗</a>
+</div>
+
+<div class="category" id="other">
+<div class="category-head"><div><h3>📱 Other Digital Services</h3><p>Additional subscriptions and online services</p></div></div>
+<div class="cards">
+<div class="card"><h4>TikTok Services</h4><p>Available options</p></div>
+<div class="card"><h4>Likee Services</h4><p>Available options</p></div>
+<div class="card"><h4>Social Media Tools</h4><p>Digital services</p></div>
+<div class="card"><h4>Microsoft Office</h4><p>Productivity</p></div>
+<div class="card"><h4>Grammarly Pro</h4><p>Writing Assistant</p></div>
+<div class="card"><h4>QuillBot Pro</h4><p>Writing Tools</p></div>
+<div class="card"><h4>Jenni AI</h4><p>Writing Assistant</p></div>
+</div>
+<a class="category-btn" href="pricing.html">Check More Prices ↗</a>
+</div>
+
+<div class="note">
+<h2>Can't Find Your Desired Service?</h2>
+<p>Contact SAQI DIGITAL HUB to ask about availability and current plans.</p>
+<a class="order" href="https://wa.me/923471191229">Contact on WhatsApp ↗</a>
+</div>
+</div>
+</section>
+
+<footer>
+<h3>SAQI DIGITAL HUB</h3>
+<p>Premium Digital Services • Affordable Prices • Quick Support</p>
+<p>WhatsApp: 0347 1191229</p>
+<p>© 2026 SAQI DIGITAL HUB. All rights reserved.</p>
+</footer>
+
+<script>
+const btn=document.getElementById("menuBtn");
+const menu=document.getElementById("menu");
+const overlay=document.getElementById("overlay");
+function closeMenu(){
+btn.classList.remove("active");
+menu.classList.remove("show");
+overlay.classList.remove("show");
+}
+btn.addEventListener("click",()=>{
+const open=!menu.classList.contains("show");
+btn.classList.toggle("active",open);
+menu.classList.toggle("show",open);
+overlay.classList.toggle("show",open);
+});
+overlay.addEventListener("click",closeMenu);
+menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+</script>
+</body>
+                                   </html>
+                                                                                  
