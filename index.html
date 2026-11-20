@@ -720,5 +720,28 @@ to
 their respective owners.
 </div>
 </div>
-
 </footer>
+  <script>
+const menuBtn=document.getElementById("menuBtn"); const sideMenu=document.getElementById("sideMenu"); const overlay=document.getElementById("overlay");
+function toggleMenu(open) {
+menuBtn.classList.toggle("active", open);
+sideMenu.classList.toggle("show", open);
+overlay.classList.toggle("show", open);
+menuBtn. setAttribute("aria-expanded", String(open));
+menuBtn.addEventListener("click",()=>{
+});
+toggleMenu(!sideMenu.classList.contains("show"));
+overlay.addEventListener("click",
+()=>toggleMenu(false));
+sideMenu.querySelectorAll("a").forEach(link=>{ link.addEventListener("click",
+()=>toggleMenu(false));
+});
+document.addEventListener("keydown", e=>{
+if(e.key==="Escape")toggleMenu(false); });
+document.querySelectorAll(".faq-question").forEach(bu tton=>{
+button.addEventListener("click", ()=>{
+});
+button.parentElement.classList.toggle("open");
+});
+</script>
+</body> </html>
